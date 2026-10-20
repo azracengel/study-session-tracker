@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyFlow | Study Session Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+
+    <!-- Website header -->
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">YOUR STUDY DASHBOARD</p>
+        <h1>StudyFlow</h1>
+        <p class="subtitle">
+          Track your study time, one session at a time.
+        </p>
+      </div>
+    </header>
+
+    <!-- Weekly study total -->
+    <section class="weekly-card">
+      <p class="card-label">TOTAL STUDY TIME THIS WEEK</p>
+      <h2 id="weekly-total">0 hr 0 min</h2>
+      <p>Every minute counts. Keep going!</p>
+    </section>
+
+    <!-- Log a new study session -->
+    <section class="card">
+      <h2>Log a Study Session</h2>
+      <p class="section-description">
+        What have you been studying today?
+      </p>
+
+      <form id="session-form" novalidate>
+
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            placeholder="e.g. Accounting, Analytics, Ethics"
+            autocomplete="off"
+          >
+          <span class="error" id="subject-error"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="duration">Minutes Studied</label>
+          <input
+            type="number"
+            id="duration"
+            placeholder="e.g. 45"
+            min="1"
+            step="1"
+          >
+          <span class="error" id="duration-error"></span>
+        </div>
+
+        <button type="submit" class="primary-button">
+          + Log Session
+        </button>
+
+      </form>
+    </section>
+
+    <!-- Subject totals -->
+    <section class="summary-section">
+      <h2>This Week by Subject</h2>
+      <p class="section-description">
+        See where your study time goes.
+      </p>
+
+      <div id="subject-summary" class="subject-grid">
+        <div class="empty-state">
+          No study sessions yet. Add your first session!
+        </div>
+      </div>
+    </section>
+
+    <!-- Session history -->
+    <section class="history-section">
+
+      <div class="history-header">
+        <div>
+          <h2>Study History</h2>
+          <p class="section-description">
+            Your previous study sessions.
+          </p>
+        </div>
+
+        <div class="history-controls">
+          <label for="sort-select">Sort by</label>
+          <select id="sort-select">
+            <option value="date-desc">Newest First</option>
+            <option value="date-asc">Oldest First</option>
+            <option value="subject">Subject A-Z</option>
+            <option value="duration">Longest First</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="session-list">
+        <div class="empty-state">
+          No sessions yet. Log your first one above.
+        </div>
+      </div>
+
+      <button id="reset-btn" class="reset-button">
+        Reset All Data
+      </button>
+
+      <!-- In-page reset confirmation -->
+      <div id="reset-confirmation" class="confirmation" hidden>
+        <p>Are you sure you want to delete all sessions?</p>
+        <div class="confirmation-actions">
+          <button id="confirm-reset" type="button">
+            Yes, Reset All
+          </button>
+          <button id="cancel-reset" type="button">
+            Cancel
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+    <footer>
+      <p>StudyFlow — Your personal study companion</p>
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
