@@ -56,15 +56,20 @@ I explored two design trials before choosing the final dashboard layout.
 - AGENTS.md — Coding guidelines
 - design-trials/ — Two design experiments
 
-## AI Reflection
 
-I used ChatGPT to help me plan the project, understand the file structure, and develop the HTML, CSS, and JavaScript.
+## AI Reflection — Verification of AI Output
 
-I reviewed the suggested code and tested the website in my browser.
+I used Claude to help me plan and build StudyFlow, especially the JavaScript that manages study sessions and calculates weekly totals.
 
-One important thing I learned was how localStorage allows a website to remember information after the page is refreshed.
+One piece of AI-generated output I verified was the JavaScript that saves study sessions using localStorage. I wanted to make sure the website actually remembered information instead of only displaying it temporarily.
 
-I also learned how JavaScript can update different parts of a dashboard when a user adds or deletes information.
+I tested this by adding study sessions for Accounting and Analytics, checking that the weekly total updated, and refreshing the browser to confirm the sessions remained saved. I also tested deleting sessions, sorting them, and resetting the dashboard.
+
+This helped me understand that the sessions array holds the data while the website is running, localStorage saves that data between visits, and the dashboard redraws when the data changes.
+
+**Relevant commit:** [JavaScript implementation](https://github.com/azracengel/study-session-tracker/commit/7a87287c596480f562d40e3cf1ee08405e3650be)
+
+**Difference from my original expectations:** I originally thought that logging study sessions would just involve adding the information to a list. I learned that JavaScript also needs to calculate the weekly total from the saved sessions and update the dashboard whenever something changes. I also learned that localStorage is what allows the website to remember my sessions after I refresh the page.
 
 ## Future Improvements
 
