@@ -1,0 +1,364 @@
+
+/* StudyFlow — Main Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px 18px;
+  background: #f7f5ff;
+  color: #25213f;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.site-header {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #7864c8;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  font-size: 38px;
+  margin: 4px 0;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 21px;
+  margin-top: 0;
+}
+
+.subtitle,
+.section-description {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.section-description {
+  margin-top: -8px;
+  margin-bottom: 22px;
+}
+
+/* Weekly total */
+
+.weekly-card {
+  background: linear-gradient(135deg, #7864c8, #a78bfa);
+  color: white;
+  border-radius: 18px;
+  padding: 30px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(120, 100, 200, 0.18);
+}
+
+.card-label {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.weekly-card h2 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.weekly-card p:last-child {
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+/* Cards */
+
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(80, 60, 140, 0.07);
+}
+
+/* Form */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+input,
+select {
+  font-family: inherit;
+  font-size: 15px;
+  padding: 13px;
+  border: 1px solid #ddd8ee;
+  border-radius: 10px;
+  background: #faf9ff;
+  color: #25213f;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #a78bfa;
+  border-color: #7864c8;
+}
+
+input.invalid {
+  border-color: #dc2626;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  min-height: 18px;
+  margin-top: 4px;
+}
+
+/* Buttons */
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #7864c8;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.primary-button:hover {
+  background: #6550b5;
+  transform: translateY(-1px);
+}
+
+/* Subject summary */
+
+.summary-section {
+  margin-bottom: 32px;
+}
+
+.subject-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.subject-card {
+  background: white;
+  border-radius: 15px;
+  padding: 22px;
+  box-shadow: 0 4px 15px rgba(80, 60, 140, 0.06);
+}
+
+.subj-name {
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.subj-total {
+  color: #7864c8;
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* Empty states */
+
+.empty-state {
+  border: 2px dashed #d8cff4;
+  background: #ffffff;
+  color: #858096;
+  padding: 30px 20px;
+  border-radius: 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Study history */
+
+.history-section {
+  margin-bottom: 35px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.history-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.history-controls label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+#session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.session-row {
+  background: white;
+  padding: 18px 20px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(80, 60, 140, 0.06);
+}
+
+.session-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.session-subject {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.session-meta {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.btn-delete {
+  background: #fff0f0;
+  color: #dc2626;
+  border: none;
+  border-radius: 8px;
+  padding: 9px 13px;
+  font-weight: bold;
+}
+
+.btn-delete:hover {
+  background: #ffe0e0;
+}
+
+/* Reset */
+
+.reset-button {
+  margin-top: 22px;
+  padding: 12px 20px;
+  border: 1px solid #dc2626;
+  border-radius: 10px;
+  color: #dc2626;
+  background: white;
+  font-weight: bold;
+}
+
+.reset-button:hover {
+  background: #fff0f0;
+}
+
+.confirmation {
+  margin-top: 15px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #f0caca;
+  border-radius: 12px;
+}
+
+.confirmation[hidden] {
+  display: none;
+}
+
+.confirmation-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#confirm-reset,
+#cancel-reset {
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: bold;
+}
+
+#confirm-reset {
+  background: #dc2626;
+  color: white;
+  border: none;
+}
+
+#cancel-reset {
+  background: white;
+  border: 1px solid #ddd8ee;
+  color: #25213f;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  color: #858096;
+  font-size: 13px;
+  padding: 20px 0;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  body {
+    padding: 18px 12px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .weekly-card h2 {
+    font-size: 34px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .history-header {
+    align-items: stretch;
+  }
+
+  .subject-grid {
+    grid-template-columns: 1fr;
+  }
+}
